@@ -98,7 +98,7 @@ var ResponsiveReactGridLayout = function (_React$Component) {
     //   var newLayout = (0, _responsiveUtils.findOrGenerateResponsiveLayout)(nextProps.layouts, nextProps.breakpoints, _breakpoint, _breakpoint, _cols, nextProps.compactType);
     //   console.log('recieve props layout', newLayout)
     let newLayout = []
-    nextProps.dashboard.widgets.forEach((widget) => {
+    nextProps.dashboard && nextProps.dashboard.widgets.forEach((widget) => {
       newLayout.push({ i: widget.id, w: widget.width, h: widget.height, x: widget.xCoordinate, y: widget.yCoordinate, minW: widget.minWidth, maxW: widget.maxWidth, minH: widget.minHeight, maxH: widget.maxHeight })
     })
     this.setState({ layout: newLayout });
